@@ -11,8 +11,10 @@ export default {
         rubik: ['Rubik', 'sans-serif'],
       },
       backgroundImage: {
-        dekstop: "url('./src/images/pattern-bg-desktop.png')",
-        mobile: "url('./src/images/pattern-bg-mobile.png')",
+        dekstop:
+          "url('https://raw.githubusercontent.com/Batikann/ip-address-tracker/master/src/images/pattern-bg-desktop.png')",
+        mobile:
+          "url('https://raw.githubusercontent.com/Batikann/ip-address-tracker/master/src/images/pattern-bg-mobile.png')",
       },
     },
   },
