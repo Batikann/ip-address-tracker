@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-rubik;
+  }
+}
+
+@layer components {
+  .box {
+    @apply lg:px-6 text-center px-2 md:text-start;
+  }
+
+  .header {
+    @apply text-xs  text-gray-500 uppercase font-medium mb-1 text-center md:text-start;
+  }
+
+  .title {
+    @apply lg:text-xl font-medium text-lg;
+  }
+}
