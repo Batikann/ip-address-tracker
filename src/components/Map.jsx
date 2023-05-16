@@ -1,10 +1,12 @@
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
+import { useEffect } from 'react'
 
-const Map = ({ lat, lng }) => {
+const Map = ({ coordinate }) => {
+  console.log(coordinate)
   return (
     <MapContainer
-      center={[lat, lng]}
+      center={coordinate}
       zoom={13}
       className="h-screen -z-10 relative"
     >
@@ -12,7 +14,7 @@ const Map = ({ lat, lng }) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={[lat, lng]}></Marker>
+      <Marker position={coordinate}></Marker>
     </MapContainer>
   )
 }
