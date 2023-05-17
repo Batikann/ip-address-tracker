@@ -1,9 +1,19 @@
-import { MapContainer, Marker, TileLayer } from 'react-leaflet'
+import { MapContainer, Marker, TileLayer, useMap } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
-import { useEffect } from 'react'
+import customIcon from '../assets/icon-location.svg'
+import { Icon } from 'leaflet'
+const iconLocation = new Icon({
+  iconUrl: customIcon,
+  iconSize: [36, 40],
+})
+
+const SetView = ({ coords }) => {
+  const map = useMap()
+  map.setView(coords)
+  return null
+}
 
 const Map = ({ coordinate }) => {
-  console.log(coordinate)
   return (
     <MapContainer
       center={coordinate}
@@ -14,7 +24,8 @@ const Map = ({ coordinate }) => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      <Marker position={coordinate}></Marker>
+      <SetView coords={coordinate} />
+      <Marker position={coordinate} icon={iconLocation}></Marker>
     </MapContainer>
   )
 }
