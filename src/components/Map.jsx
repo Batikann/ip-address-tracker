@@ -18,7 +18,7 @@ const Map = ({ coordinate }) => {
     <MapContainer
       center={coordinate}
       zoom={13}
-      className="h-screen -z-10 relative"
+      className="h-screen relative z-10"
     >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
